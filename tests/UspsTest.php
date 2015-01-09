@@ -58,6 +58,16 @@ class UspsTest extends PHPUnit_Framework_TestCase {
     }
 
     /**
+     * Exception is thrown if destination is set to US
+     * @expectedException   Exception
+     */
+    public function test_exception_thrown_for_us_destination()
+    {
+        $usps = new Usps($this->userId);
+        $usps->setDestination('US');
+    }
+
+    /**
      * Set an international destination
      */
     public function test_set_international_destination()
@@ -83,6 +93,26 @@ class UspsTest extends PHPUnit_Framework_TestCase {
         ];
         $usps->setDimensions($dimensions);
         $this->assertEquals($dimensions, Assert::readAttribute($usps, 'dimensions'));
+    }
+
+    /**
+     * Check that weight dimensions are still set when omitted
+     */
+    public function test_set_package_dimensions_without_weight()
+    {
+        $usps = new Usps($this->userId);
+        $usps->setDimensions([
+            'length'    => 1,
+            'width'     => 2.5,
+            'height'    => '3',
+        ]);
+        $this->assertEquals([
+            'length'    => 1,
+            'width'     => 2.5,
+            'height'    => '3',
+            'pounds'    => 0,
+            'ounces'    => 0
+        ], Assert::readAttribute($usps, 'dimensions'));
     }
 
     /**
@@ -179,27 +209,28 @@ class UspsTest extends PHPUnit_Framework_TestCase {
  
     /**
      * Parse an actual response from the USPS testing server.
-     * A valid userId is required to run this test.
+     * A valid userId is required to run the full test.
      */
-    // public function test_usps_response()
-    // {
-    //     $usps = new Usps($this->userId);
-    //     $rates = $usps->useTestingServer()
-    //         ->setOrigin('12345')
-    //         ->setDestination('90210')
-    //         ->setDimensions([
-    //             'length'    => 1,
-    //             'width'     => 2,
-    //             'height'    => 3,
-    //             'pounds'    => 1
-    //         ])
-    //         ->setValue(49.99)
-    //         ->calculate();
-    //     $this->assertTrue(count($rates) > 1);
-    //     foreach ($rates as $rate) {
-    //         $this->assertTrue(array_key_exists('code', $rate));
-    //         $this->assertTrue(array_key_exists('name', $rate));
-    //         $this->assertTrue(array_key_exists('cost', $rate));
-    //     }
-    // }
+    public function test_usps_response()
+    {
+        $usps = new Usps($this->userId);
+        $rates = $usps->useTestingServer()
+            ->setOrigin('12345')
+            ->setDestination('90210')
+            ->setDimensions([
+                'length'    => 1,
+                'width'     => 2,
+                'height'    => 3,
+                'pounds'    => 1
+            ])
+            ->setValue(49.99)
+            ->calculate();
+        $this->assertTrue(is_array($rates));
+        // $this->assertTrue(count($rates) > 1);
+        // foreach ($rates as $rate) {
+        //     $this->assertTrue(array_key_exists('code', $rate));
+        //     $this->assertTrue(array_key_exists('name', $rate));
+        //     $this->assertTrue(array_key_exists('cost', $rate));
+        // }
+    }
 }
