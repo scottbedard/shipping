@@ -206,17 +206,55 @@ class UspsTest extends PHPUnit_Framework_TestCase {
             $this->assertTrue(array_key_exists('cost', $rate));
         }
     }
+
+    /**
+     * Exceptions should be thrown if we call calculate() prematurely
+     * @expectedException   Exception
+     */
+    public function test_exception_thrown_for_missing_information()
+    {
+        $usps = new Usps($this->userId);
+        $rates = $usps->useTestingServer()
+            ->calculate();
+    }
  
     /**
-     * Parse an actual response from the USPS testing server.
+     * Parse an actual domestic response from the USPS testing server.
      * A valid userId is required to run the full test.
      */
-    public function test_usps_response()
+    public function test_domestic_response()
     {
         $usps = new Usps($this->userId);
         $rates = $usps->useTestingServer()
             ->setOrigin('12345')
             ->setDestination('90210')
+            ->setDimensions([
+                'length'    => 1,
+                'width'     => 2,
+                'height'    => 3,
+                'pounds'    => 1
+            ])
+            ->setValue(49.99)
+            ->calculate();
+        $this->assertTrue(is_array($rates));
+        // $this->assertTrue(count($rates) > 1);
+        // foreach ($rates as $rate) {
+        //     $this->assertTrue(array_key_exists('code', $rate));
+        //     $this->assertTrue(array_key_exists('name', $rate));
+        //     $this->assertTrue(array_key_exists('cost', $rate));
+        // }
+    }
+
+    /**
+     * Parse an actual international response from the USPS testing server.
+     * A valid userId is required to run the full test.
+     */
+    public function test_international_response()
+    {
+        $usps = new Usps($this->userId);
+        $rates = $usps->useTestingServer()
+            ->setOrigin('12345')
+            ->setDestination('Canada')
             ->setDimensions([
                 'length'    => 1,
                 'width'     => 2,
