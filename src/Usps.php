@@ -6,48 +6,48 @@
  *    01  First-Class Mail Large Envelope
  *    02  First-Class Mail Stamped Letter
  *    03  First-Class Mail Postcards
- *    1   Priority Mail 2-Day
- *    2   Priority Mail Express 2-Day Hold For Pickup
- *    3   Priority Mail Express 2-Day
+ *    1   Priority Mail
+ *    2   Priority Mail Express Hold For Pickup
+ *    3   Priority Mail Express
  *    4   Standard Post
  *    6   Media Mail Parcel
  *    7   Library Mail Parcel
- *    13  Priority Mail Express 2-Day Flat Rate Envelope
+ *    13  Priority Mail Express Flat Rate Envelope
  *    15  First-Class Mail Large Postcards
- *    16  Priority Mail 2-Day Flat Rate Envelope
- *    17  Priority Mail 2-Day Medium Flat Rate Box
- *    22  Priority Mail 2-Day Large Flat Rate Box
- *    27  Priority Mail Express 2-Day Flat Rate Envelope Hold For Pickup
- *    28  Priority Mail 2-Day Small Flat Rate Box
- *    29  Priority Mail 2-Day Padded Flat Rate Envelope
- *    30  Priority Mail Express 2-Day Legal Flat Rate Envelope
- *    31  Priority Mail Express 2-Day Legal Flat Rate Envelope Hold For Pickup
- *    33  Priority Mail 2-Day Hold For Pickup
- *    34  Priority Mail 2-Day Large Flat Rate Box Hold For Pickup
- *    35  Priority Mail 2-Day Medium Flat Rate Box Hold For Pickup
- *    36  Priority Mail 2-Day Small Flat Rate Box Hold For Pickup
- *    37  Priority Mail 2-Day Flat Rate Envelope Hold For Pickup
- *    38  Priority Mail 2-Day Gift Card Flat Rate Envelope
- *    39  Priority Mail 2-Day Gift Card Flat Rate Envelope Hold For Pickup
- *    40  Priority Mail 2-Day Window Flat Rate Envelope
- *    41  Priority Mail 2-Day Window Flat Rate Envelope Hold For Pickup
- *    42  Priority Mail 2-Day Small Flat Rate Envelope
- *    43  Priority Mail 2-Day Small Flat Rate Envelope Hold For Pickup
- *    44  Priority Mail 2-Day Legal Flat Rate Envelope
- *    45  Priority Mail 2-Day Legal Flat Rate Envelope Hold For Pickup
- *    46  Priority Mail 2-Day Padded Flat Rate Envelope Hold For Pickup
- *    47  Priority Mail 2-Day Regional Rate Box A
- *    48  Priority Mail 2-Day Regional Rate Box A Hold For Pickup
- *    49  Priority Mail 2-Day Regional Rate Box B
- *    50  Priority Mail 2-Day Regional Rate Box B Hold For Pickup
+ *    16  Priority Mail Flat Rate Envelope
+ *    17  Priority Mail Medium Flat Rate Box
+ *    22  Priority Mail Large Flat Rate Box
+ *    27  Priority Mail Express Flat Rate Envelope Hold For Pickup
+ *    28  Priority Mail Small Flat Rate Box
+ *    29  Priority Mail Padded Flat Rate Envelope
+ *    30  Priority Mail Express Legal Flat Rate Envelope
+ *    31  Priority Mail Express Legal Flat Rate Envelope Hold For Pickup
+ *    33  Priority Mail Hold For Pickup
+ *    34  Priority Mail Large Flat Rate Box Hold For Pickup
+ *    35  Priority Mail Medium Flat Rate Box Hold For Pickup
+ *    36  Priority Mail Small Flat Rate Box Hold For Pickup
+ *    37  Priority Mail Flat Rate Envelope Hold For Pickup
+ *    38  Priority Mail Gift Card Flat Rate Envelope
+ *    39  Priority Mail Gift Card Flat Rate Envelope Hold For Pickup
+ *    40  Priority Mail Window Flat Rate Envelope
+ *    41  Priority Mail Window Flat Rate Envelope Hold For Pickup
+ *    42  Priority Mail Small Flat Rate Envelope
+ *    43  Priority Mail Small Flat Rate Envelope Hold For Pickup
+ *    44  Priority Mail Legal Flat Rate Envelope
+ *    45  Priority Mail Legal Flat Rate Envelope Hold For Pickup
+ *    46  Priority Mail Padded Flat Rate Envelope Hold For Pickup
+ *    47  Priority Mail Regional Rate Box A
+ *    48  Priority Mail Regional Rate Box A Hold For Pickup
+ *    49  Priority Mail Regional Rate Box B
+ *    50  Priority Mail Regional Rate Box B Hold For Pickup
  *    53  First-Class Package Service Hold For Pickup
- *    55  Priority Mail Express 2-Day Flat Rate Boxes
- *    56  Priority Mail Express 2-Day Flat Rate Boxes Hold For Pickup
- *    58  Priority Mail 2-Day Regional Rate Box C
- *    59  Priority Mail 2-Day Regional Rate Box C Hold For Pickup
+ *    55  Priority Mail Express Flat Rate Boxes
+ *    56  Priority Mail Express Flat Rate Boxes Hold For Pickup
+ *    58  Priority Mail Regional Rate Box C
+ *    59  Priority Mail Regional Rate Box C Hold For Pickup
  *    61  First-Class Package Service
- *    62  Priority Mail Express 2-Day Padded Flat Rate Envelope
- *    63  Priority Mail Express 2-Day Padded Flat Rate Envelope Hold For Pickup
+ *    62  Priority Mail Express Padded Flat Rate Envelope
+ *    63  Priority Mail Express Padded Flat Rate Envelope Hold For Pickup
  *    78  First-Class Mail Metered Letter
  *
  * International Codes
