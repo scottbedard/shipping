@@ -1,4 +1,5 @@
 # USPS Shipping Calculator
+[![Build Status](https://travis-ci.org/scottbedard/shipping.svg?branch=master)](https://travis-ci.org/scottbedard/shipping)
 A simple PHP wrapper for USPS shipping calulations.
 
 ### Instructions

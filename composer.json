@@ -1,5 +1,5 @@
 {
-    "name": "Bedard/Shipping",
+    "name": "bedard/shipping",
     "description": "API wrapper for shipping calculations.",
     "license": "MIT",
     "keywords": ["shipping", "usps"],
