@@ -183,8 +183,9 @@ class UspsTest extends PHPUnit_Framework_TestCase {
      */
     // public function test_usps_response()
     // {
-    //     $usps = new Usps($this->userId, TRUE);
-    //     $rates = $usps->setOrigin('12345')
+    //     $usps = new Usps($this->userId);
+    //     $rates = $usps->useTestingServer()
+    //         ->setOrigin('12345')
     //         ->setDestination('90210')
     //         ->setDimensions([
     //             'length'    => 1,
