@@ -178,7 +178,7 @@ class UspsTest extends PHPUnit_Framework_TestCase {
         $method = $reflectionOfRate->getMethod('parseDomesticResponse');
         $method->setAccessible(TRUE);
         $rates = $method->invokeArgs($usps, [$dom]);
-        $this->assertEquals(count($rates), 23);
+        $this->assertEquals(count($rates), 28);
         foreach ($rates as $rate) {
             $this->assertTrue(array_key_exists('code', $rate));
             $this->assertTrue(array_key_exists('name', $rate));
